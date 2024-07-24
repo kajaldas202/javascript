@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //method-1
+        const calculate = (a, b, callback) => {
+            return callback(a, b)
+        }
+        // const add = calculate(1, 2, () => {
+        //     return 1 + 2
+        // })
+        // const sub = calculate(1, 6, () => {
+        //     return 1 - 6
+
+        // })
+        // console.log(add)
+        // console.log(sub)
+
+        //method-2
+        const add = calculate(3,4,(num1,num2)=>{
+            return num1+num2
+        })
+        console.log(add)
+        const sub=calculate(5,2,(num1,num2)=>{
+            return num1-num2
+        })
+        console.log(sub)
+    </script>
+</body>
+
+</html>

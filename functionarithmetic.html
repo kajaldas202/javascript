@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <input type="number" id="vOne" placeholder="Enter first value:">
+    <input type="number" id="vTwo" placeholder="Enter second value:">
+    <button onclick="add()">+</button>
+    <button onclick="sub()">-</button>
+    <button onclick="multi()">*</button>
+    <button onclick="div()">/</button>
+    <div id="output"></div>
+
+    <script>
+        function add(){
+            var vOne=document.getElementById(vOne).value;
+            var vTwo=document.getElementById(vTwo).value;
+            var output=document.getElementById('output');
+
+            // type conversion
+            
+            vOne=Number(vOne)
+            vTwo=Number(vTwo)
+            output.Html=vOne+vTwo;
+        }
+    </script>
+
+</body>
+</html>

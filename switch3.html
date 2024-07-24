@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="number" id="vOne" placeholder="Enter your first number:">
+    <input type="number" id="vTwo" placeholder="ENter your second number:">
+    <button onclick="cal(1)">+</button>
+    <button onclick="cal(2)">-</button>
+    <button onclick="cal(3)">*</button>
+    <button onclick="cal(4)">/</button>
+    <div id="output"></div>
+
+    <script>
+        function cal(choice){
+            var vOne=document.getElementById('vOne')
+            var vTwo=document.getElementById('vTwo')
+            var output=document.getElementById('output')
+            var result;
+            switch(choice){
+                case 1:
+                    vOne=number(vOne);
+                    vTwo=number(vTwo);
+                    result=vOne+vTwo;
+                break;
+                case 2:
+                    result=vOne-vTwo;
+                break;
+                case 3:
+                    result=vOne*vTwo;
+                break;
+                case 4:
+                    result=vOne/vTwo;
+                break;
+            }
+                output.innerHTML=result
+        }
+    </script>
+
+</body>
+</html>

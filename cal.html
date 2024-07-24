@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="cal.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="main">
+        <input type="text" style="text-align: right;" class="bg-dark" id="Main" placeholder="0">
+        <div class="btn1">
+            <div class="btn2">
+                <button style="width: 72px; height: 55px;" class="border rounded-circle border-light bg-dark " type="button"
+                    onclick="clearall()">C</button>
+                <button style="width: 72px; height: 55px;" class="border rounded-circle 
+                           border-light bg-dark " type="text" value="√x" onclick="calc(this.value)">√x</button>
+                <button style="width: 72px; height: 55px;" class="border rounded-circle 
+                           border-light bg-dark " type="text" value="CE" onclick="calc(this.value)">CE</button>
+                <button style="width: 72px; height: 55px;" class="border rounded-circle 
+                           border-light bg-dark " type="text" value="/" onclick="calc(this.value)">/</button>
+                <br>
+                <button style="width: 72px; height: 55px;" class="border rounded-circle 
+                           border-light bg-dark " type="text" value="8" onclick="calc(this.value)">8</button>
+                <button style="width: 72px; height: 55px;" class="border rounded-circle 
+                           border-light bg-dark " type="text" value="7" onclick="calc(this.value)">7</button>
+                <button style="width: 72px; height: 55px;" class="border rounded-circle 
+                           border-light bg-dark " type="text" value="9" onclick="calc(this.value)">9</button>
+                <button style="width: 72px; height: 55px;" class="border rounded-circle 
+                           border-light bg-dark " type="text" value="+" onclick="calc(this.value)">+</button>
+                <br>
+                <button style="width: 72px; height: 55px;" class="border rounded-circle 
+                           border-light bg-dark " type="text" value="4" onclick="calc(this.value)">4</button>
+                <button style="width: 72px; height: 55px;" class="border rounded-circle 
+                           border-light bg-dark " type="text" value="5" onclick="calc(this.value)">5</button>
+                <button style="width: 72px; height: 55px;" class="border rounded-circle 
+                           border-light bg-dark " type="text" value="6" onclick="calc(this.value)">6</button>
+                <button style="width: 72px; height: 55px;" class="border rounded-circle 
+                           border-light bg-dark " type="text" value="-" onclick="calc(this.value)">-</button>
+                <br>
+                <button style="width: 72px; height: 55px;" class="border rounded-circle 
+                           border-light bg-dark " type="text" value="1" onclick="calc(this.value)">1</button>
+                <button style="width: 72px; height: 55px;" class="border rounded-circle 
+                           border-light bg-dark " type="text" value="2" onclick="calc(this.value)">2</button>
+                <button style="width: 72px; height: 55px;" class="border rounded-circle 
+                           border-light bg-dark " type="text" value="3" onclick="calc(this.value)">3</button>
+                <button style="width: 72px; height: 55px;" class="border rounded-circle 
+                           border-light bg-dark " type="text" value="%" onclick="calc(this.value)">%</button>
+                <br>
+                <button style="width: 72px; height: 55px; border-bottom-left-radius: 10px;" class="border rounded-circle 
+                           border-light bg-dark " type="text" value="0" onclick="calc(this.value)">0</button>
+                <button style="width: 72px; height: 55px;" class="border rounded-circle 
+                           border-light bg-dark " type="text" value="00" onclick="calc(this.value)">00</button>
+                <button style="width: 72px; height: 55px;" class="border rounded-circle 
+                           border-light bg-dark " type="text" value="." onclick="calc(this.value)">.</button>
+                <button style="width: 72px; height: 55px; border-bottom-right-radius: 10px;" class="border rounded-circle 
+                           border-light bg-dark " type="button">=</button>
+            </div>
+
+        </div>
+
+    </div>
+    <script src="cal.js"></script>
+</body>
+
+</html>

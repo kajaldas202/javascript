@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        var email = prompt("enter an email id")
+        var existemail = "abc@gmail.com"
+        var existpass = "1234"
+
+        if (email != "") {
+            if (email == existemail) {
+                var oldpass = prompt("enter old password")
+                if (oldpass != "") {
+                    if (oldpass == existpass) {
+                        var newpass = prompt("enter an new password")
+                        if (newpass != "") {
+                            existpass = newpass;
+                            console.log(existpass)
+                            alert("your password has been updated")
+                        } else {
+                            alert("enter new password")
+                        }
+                    } else {
+                        alert("enter old password")
+                    }
+                }
+            } else {
+                alert("enter exist email id")
+            }
+        } else {
+            alert("enter exist email id")
+        }
+
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <style>
+        .forms {
+            padding: 60px;
+            margin-left: 340px;
+            width: 800px;
+            margin-top: 100px;
+            box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="forms localData">
+        <form method="post" id="submit">
+            <div class="mb-3 w-100 move">
+                <input type="text" class="form-control" id="username" placeholder="Enter user name">
+            </div>
+            <div class="mb-3 w-100 move">
+                <input type="email" class="form-control" id="email" placeholder="Enter your email">
+            </div>
+            <div class="mb-3 w-100 move">
+                <input type="number" class="form-control" id="mobile" placeholder="Enter your mobile">
+            </div>
+            <button type="submit" class="btn btn-primary" id="submitButton">Submit</button>
+        </form>
+    </div>
+
+    <table class="table container">
+        <thead>
+          <tr>
+            <th scope="col">sr no.</th>
+            <th scope="col">username</th>
+            <th scope="col">email</th>
+            <th scope="col">mobile</th>
+          </tr>
+        </thead>
+        <tbody id="tabledata">
+            <!-- table detail -->
+        </tbody>
+    </table>
+</body>
+
+<script>
+    document.querySelector('#submit')
+    .addEventListener('submit',(e) =>{
+        console.log(e)
+        e.preventDefault()
+        const inputAll =document.querySelectorAll('.localData input')
+
+        console.log(inputAll[0])
+        console.log(inputAll[1])
+        console.log(inputAll[2])
+
+        const username =inputAll[0].value;
+        const email =inputAll[1].value;
+        const mobile =inputAll[2].value;
+
+        console.log('username ${username},email ${email},mobile ${mobile}')
+
+        const box=JSON.parse(localStorage.getItem('userlist')) || [];
+
+        const user={
+            username:username,
+            email:email,
+            mobile:mobile,
+        }
+
+        localStorage.setItem('userlist',JSON.stringify(user))
+    })
+
+    box.push(user)
+    console.log(box)
+    localStorage.setItem('userlist',JSON.stringify(box))
+
+    function show(){
+        const user=JSON.parse(localStorage.getItem('userlist'))
+        const tabledata=document.querySelector('#tabledata')
+        let result =""
+        user.forEach((ele,index) => {
+            console.log(ele)
+            result +=
+
+            rowtable.innerHTML = `
+            <th format="rowtable">${index+1}</th>
+            <td>${ele.username}</td>
+            <td>${ele.email}</td>
+            <td>${ele.mobile}</td>
+            <td>
+                <button class="btn btn-warning" onclick="editRow(this)">Edit</button>
+                <button class="btn btn-danger" onclick="deleteRow(this)">Delete</button>
+            </td>
+            `;
+        })
+    }
+    show()
+</script>
+
+</html>
